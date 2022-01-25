@@ -1,0 +1,13 @@
+# See https://qiita.com/hgaiji/items/edf71435d0565257f980
+version: "3"
+services:
+  notebook:
+    build: .
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - ./config/.jupyter:/home/jovyan/.jupyter
+      - ./src:/home/jovyan/work
+    command: start-notebook.sh --NotebookApp.token=''
