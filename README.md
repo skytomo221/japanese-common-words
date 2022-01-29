@@ -1,14 +1,9 @@
-# kana-frequency-words
+# Japanese Common Words
 
-日本語版Wordleなどにお使いください。
+You can use Japanese Wordle.
 
-[日本語版ウィキペディア](https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Japanese)
-における最も頻出する上位20000件の単語を、
-MeCabを使ってカナに変換しました。
+## How to build
 
-頻出単語リストは以下の場所にあります。
-
-- [普通の頻出単語リスト](frequency-words.tsv)
-- [カナの頻出単語リスト](./kana-frequency-words.tsv)
-
-いずれも頻出順です。
+```bash
+docker-compose up
+```

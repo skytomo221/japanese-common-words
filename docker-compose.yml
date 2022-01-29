@@ -1,13 +1,7 @@
-# See https://qiita.com/hgaiji/items/edf71435d0565257f980
-version: "3"
+version: '3'
 services:
-  notebook:
+  apache:
+    container_name: japanese-common-words
     build: .
-    ports:
-      - "8888:8888"
-    environment:
-      - JUPYTER_ENABLE_LAB=yes
     volumes:
-      - ./config/.jupyter:/home/jovyan/.jupyter
-      - ./src:/home/jovyan/work
-    command: start-notebook.sh --NotebookApp.token=''
+      - ./src:/workspace
